@@ -117,10 +117,7 @@ int main(){
 			cout<<endl;
 		}else if(opcion == 3){
 			if(escuadrones.size()>= 4){
-
-			
-
-			
+			cout<<"LISTA DE ESCUADRONES"<<endl;
 			for(int i = 0; i < escuadrones.size(); i++) {
 				cout<<i<<". "<<escuadrones[i]->getEnombre()<<endl;
 			}
@@ -167,6 +164,8 @@ int main(){
 						cout<<"2."<<endl;
 						defense += escuadrones[retaguardia2]->getSoldiers()[i]->defensa();
 					}
+					cout<<"Equipo 1 ataca al equipo 2: "<<endl;
+					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<defense<<endl;
 					if(attack> (defense*10)){
 						ganador = 1;
 						break;
@@ -178,6 +177,8 @@ int main(){
 					for(int i = 0; i < escuadrones[retaguardia1]->getSoldiers().size(); i++) {
 						defense += escuadrones[retaguardia1]->getSoldiers()[i]->defensa();
 					}
+					cout<<"Equipo 2 ataca al equipo 1:"<<endl;
+					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<defense<<endl;
 					if(attack>(defense*10)){
 						ganador = 2;
 					}
@@ -194,7 +195,7 @@ int main(){
 				cout<<"EL EQUIPO 2 HA GANADO"<<endl;
 				cout<<escuadrones[vanguardia2]->getEnombre()<<" y "<<escuadrones[retaguardia2]->getEnombre()<<endl;
 			}
-
+			cout<<endl;
 
 		}else{
 			cout<<"No tiene sufucientes escuadrones"<<endl;
