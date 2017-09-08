@@ -14,6 +14,8 @@ class CorazasDuras : public Soldado{
 		void setDureza(int);
 		void setLanzas(int);
 
+		double ataque();
+		double defensa();
 
 };
 

@@ -23,3 +23,11 @@ void Asesino::setAsesinatos(int pAsesi){
 void Asesino::setSigilo(int psigilo){
 	sigilo = psigilo;
 }
+
+double Asesino::ataque(){
+	return asesinatos;
+}
+
+double Asesino::defensa(){
+	return sigilo*10;
+}

@@ -28,3 +28,11 @@ void CorazasDuras::setDureza(int pdure){
 void CorazasDuras::setLanzas(int planz){
 	lanzas = planz;
 }
+
+double CorazasDuras::ataque(){
+	return lanzas;
+}
+
+double CorazasDuras::defensa(){
+	return dureza;
+}

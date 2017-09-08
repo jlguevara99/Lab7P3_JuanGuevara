@@ -13,6 +13,9 @@ class Asesino : public Soldado{
 
 		void setAsesinatos(int);
 		void setSigilo(int);
+
+		double ataque();
+		double defensa();
 };
 
 #endif
