@@ -5,17 +5,15 @@
 #include "CorazasDuras.h"
 #include "Asesino.h"
 #include "Escuadron.h"
+#include <vector>
 using namespace std;
 
 int main(){
-	Soldado* m = new Arquero("s","d",1,2,2);
-	Soldado* x = new CorazasDuras("s","d",1,2,2);
-	Soldado* c = new Asesino("d","d",2,2,2);
-	Escuadron* s = new Escuadron("d");
-	cout<<"si"<<endl;
-	delete m;
-	delete x;
-	delete c;
-	delete s;
+	vector<Escuadron> escuadrones;
+	bool salir = true;
+
+	cout<<">>>>LAB 7 -- JUAN GUEVARA.<<<<"<<endl;
+
+
 	return 0;
 }

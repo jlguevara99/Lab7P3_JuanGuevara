@@ -9,6 +9,14 @@ Soldado::Soldado(){
 	edad = 0;
 }
 
+double Soldado::ataque(){
+	return 0;
+}
+
+double Soldado::defensa(){
+	return 0;
+}
+
 Soldado::Soldado(string pNombre, string pCiudad, int pEdad){
 	nombre = pNombre;
 	ciudad = pCiudad;

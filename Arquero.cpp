@@ -23,3 +23,13 @@ void Arquero::setFlechas(int numero){
 void Arquero::setPrecision(int numero){
 	precision = numero;
 }
+
+double Arquero::ataque(){
+	double valor;
+	valor = flechas*(precision/1000);
+	return valor;
+}
+
+double Arquero::defensa(){
+	return 0;
+}

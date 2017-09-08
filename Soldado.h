@@ -24,7 +24,8 @@ class Soldado{
 		void setEdad(int);
 
 		//funciones polimorficas
-
+		virtual double ataque();
+		virtual double defensa();
 };
 
 

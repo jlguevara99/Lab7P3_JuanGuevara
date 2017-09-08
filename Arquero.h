@@ -14,8 +14,10 @@ class Arquero : public Soldado{
 
 		void setFlechas(int);
 		void setPrecision(int);
-
-
+		
+		double ataque();
+		double defensa();
+	
 };
 
 
