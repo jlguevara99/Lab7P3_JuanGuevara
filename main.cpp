@@ -114,7 +114,7 @@ int main(){
 				}
 
 			} while (seguir);
-			
+			cout<<endl;
 		}else if(opcion == 3){
 			if(escuadrones.size()>= 4){
 
@@ -184,6 +184,7 @@ int main(){
 				}
 			
 			}
+			cout<<endl;
 			if(ganador == 0){
 				cout<<"HA SIDO UN EMPATE!!"<<endl;
 			}else if(ganador == 1){
