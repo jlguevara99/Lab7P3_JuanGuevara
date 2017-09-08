@@ -165,7 +165,7 @@ int main(){
 						defense += escuadrones[retaguardia2]->getSoldiers()[i]->defensa();
 					}
 					cout<<"Equipo 1 ataca al equipo 2: "<<endl;
-					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<defense<<endl;
+					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<(defense*10)<<endl;
 					if(attack> (defense*10)){
 						ganador = 1;
 						break;
@@ -178,7 +178,7 @@ int main(){
 						defense += escuadrones[retaguardia1]->getSoldiers()[i]->defensa();
 					}
 					cout<<"Equipo 2 ataca al equipo 1:"<<endl;
-					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<defense<<endl;
+					cout<<"El ataque es: "<<attack<<" y la defensa es: "<<(defense*10)<<endl;
 					if(attack>(defense*10)){
 						ganador = 2;
 					}
