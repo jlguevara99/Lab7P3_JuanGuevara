@@ -130,9 +130,22 @@ int main(){
 				cin>>vanguardia1;
 			}
 			cout<<"Ingrese la retaguardia del primer equipo: "<<endl;
+			cin>>retaguardia1;
+			while(retaguardia1<0 || retaguardia1>=escuadrones.size()){
+				cout<<"Valor incorrecto, ingrese de nuevo"<<endl;
+				cin>>retaguardia1;
+			}
+			cout<<"Ingrese la vanguardia del segundo equipo: "<<endl;
 			cin>>vanguardia2;
 			while(vanguardia2<0 || vanguardia2>=escuadrones.size()){
 				cout<<"Valor incorrecto, ingrese de nuevo"<<endl;
+				cin>>vanguardia2;
+			}
+			cout<<"Ingrese la retaguardia del segundo equipo: "<<endl;
+			cin>>retaguardia2;
+			while(retaguardia2<0 || retaguardia2>escuadrones.size()){
+				cout<<"Valor incorrecto, ingrese de nuevo"<<endl;
+				cin>>retaguardia2;
 			}
 		}else if(opcion == 4){
 			salir = false;
