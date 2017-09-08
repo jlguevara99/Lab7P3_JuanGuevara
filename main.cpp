@@ -73,7 +73,7 @@ int main(){
 					cin>>preci;
 					Soldado* tempo = new Arquero(nombreS,ciudads,edads,flechas,preci);
 					temporal.push_back(tempo);
-					delete tempo;
+					
 				}else if(tipo==2){
 					cout<<"Ingrese la dureza de la armadura: "<<endl;
 					int dureza;
@@ -87,7 +87,7 @@ int main(){
 					cin>>lanzas;
 					Soldado* tempo = new CorazasDuras(nombreS,ciudads,edads,dureza,lanzas);
 					temporal.push_back(tempo);
-					delete tempo;
+					
 				}else if(tipo==3){
 					cout<<"Ingrese la cantidad de asesinatos: "<<endl;
 					int cantidad;
@@ -101,7 +101,7 @@ int main(){
 					}
 					Soldado* tempo = new Asesino(nombreS,ciudads,edads,cantidad,sigilo);
 					temporal.push_back(tempo);
-					delete tempo;
+					
 				}
 
 				escuadrones[escuadron]->setSoldiers(temporal);
@@ -116,6 +116,11 @@ int main(){
 			} while (seguir);
 			
 		}else if(opcion == 3){
+			if(escuadrones.size()>= 4){
+
+			
+
+			
 			for(int i = 0; i < escuadrones.size(); i++) {
 				cout<<i<<". "<<escuadrones[i]->getEnombre()<<endl;
 			}
@@ -147,6 +152,54 @@ int main(){
 				cout<<"Valor incorrecto, ingrese de nuevo"<<endl;
 				cin>>retaguardia2;
 			}
+			//simulacion
+			int ganador=0;
+			//vector<Soldado*> sol = escuadrones[vanguardia1]->getSoldiers();
+			for(int i = 0; i < 2; i++) {
+				double attack=0;
+				double defense=0;
+				if(i == 0){				
+					for(int i = 0; i < escuadrones[vanguardia1]->getSoldiers().size(); i++) {
+						cout<<"1."<<endl;
+						attack += escuadrones[vanguardia1]->getSoldiers()[i]->ataque();
+					}
+					for(int i = 0; i < escuadrones[retaguardia2]->getSoldiers().size(); i++) {
+						cout<<"2."<<endl;
+						defense += escuadrones[retaguardia2]->getSoldiers()[i]->defensa();
+					}
+					if(attack> (defense*10)){
+						ganador = 1;
+						break;
+					}
+				}else{
+					for(int i = 0; i < escuadrones[vanguardia2]->getSoldiers().size(); i++) {
+						attack += escuadrones[vanguardia2]->getSoldiers()[i]->ataque();
+					}
+					for(int i = 0; i < escuadrones[retaguardia1]->getSoldiers().size(); i++) {
+						defense += escuadrones[retaguardia1]->getSoldiers()[i]->defensa();
+					}
+					if(attack>(defense*10)){
+						ganador = 2;
+					}
+				}
+			
+			}
+			if(ganador == 0){
+				cout<<"HA SIDO UN EMPATE!!"<<endl;
+			}else if(ganador == 1){
+				cout<<"EL EQUIPO 1 HA GANADO"<<endl;
+				cout<<escuadrones[vanguardia1]->getEnombre()<<" y "<<escuadrones[retaguardia1]->getEnombre()<<endl;
+			}else{
+				cout<<"EL EQUIPO 2 HA GANADO"<<endl;
+				cout<<escuadrones[vanguardia2]->getEnombre()<<" y "<<escuadrones[retaguardia2]->getEnombre()<<endl;
+			}
+
+
+		}else{
+			cout<<"No tiene sufucientes escuadrones"<<endl;
+		}
+
+
 		}else if(opcion == 4){
 			salir = false;
 		}else{
